@@ -1,0 +1,179 @@
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f7;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #e60073;
+      font-size: 3em;
+      font-family: 'Cursive', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    .yes-btn {
+      background-color: #ff66b2;
+      color: white;
+      box-shadow: 0 4px 10px rgba(255, 102, 178, 0.6);
+    }
+
+    .no-btn {
+      background-color: #ff4d4d;
+      color: white;
+      box-shadow: 0 4px 10px rgba(255, 77, 77, 0.6);
+      transition: opacity 0.3s ease;
+    }
+
+    .yes-btn:active {
+      background-color: #e60073;
+    }
+
+
+    .heart {
+      position: absolute;
+      font-size: 50px;
+      animation: beat 1s infinite;
+      transition: all 0.5s ease;
+    }
+
+
+    .flower {
+      position: absolute;
+      font-size: 50px;
+      animation: flowerGrow 1s infinite;
+      transition: all 0.5s ease;
+    }
+
+
+    .heart-big {
+      font-size: 100px;
+      animation: bigBeat 0.5s infinite;
+    }
+
+
+    .flower-big {
+      font-size: 100px;
+      animation: flowerBigGrow 0.5s infinite;
+    }
+
+    @keyframes beat {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.2);
+      }
+      50% {
+        transform: scale(1);
+      }
+      75% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bigBeat {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.5);
+      }
+      50% {
+        transform: scale(1);
+      }
+      75% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes flowerGrow {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes flowerBigGrow {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+
+    .message {
+      margin-top: 30px;
+      font-size: 2em;
+      color: #e60073;
+      font-weight: bold;
+      display: none;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      font-family: 'Cursive', sans-serif;
+    }
+
+
+    .floating-heart {
+      position: absolute;
+      font-size: 30px;
+      animation: float 5s infinite ease-in-out;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(-50%) rotate(0);
+      }
+      50% {
+        transform: translateY(-200px) translateX(-50%) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) translateX(-50%) rotate(360deg);
+      }
+    }
